@@ -73,6 +73,9 @@ export default class Home extends React.Component{
     render(){
         return(
             <div className="h-100">
+                <div>
+                    {process.env.REACT_APP_API_URL}
+                </div>
                 <Navbar
                     history = {this.props.history}
                     isAuthenticated = {this.props.isAuthenticated}
