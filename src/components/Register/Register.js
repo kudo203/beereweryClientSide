@@ -77,7 +77,11 @@ export default class Register extends React.Component {
     };
 
     render() {
-        console.log("the role is " , this.state)
+        const backdropRegister = {
+            height: '100%',
+            background: "url(" + process.env.REACT_APP_BACKDROP_REGISTER + ") no-repeat",
+            backgroundSize: '100% 100%',
+        };
         return (
 
             <div style={{'height': '100%'}}>
@@ -193,7 +197,7 @@ export default class Register extends React.Component {
                         </div>
                     </Grid>
                     <Grid item md={6} only={['md', 'xl']}>
-                        <div id={'background_pic2'}/>
+                        <div style={backdropRegister}/>
                     </Grid>
                 </Grid>
             </div>

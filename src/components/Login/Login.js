@@ -58,11 +58,16 @@ export default class Login extends React.Component {
 
 
     render() {
+        const backdropLogin = {
+            height: '120%',
+            background: "url(" + process.env.REACT_APP_BACKDROP_LOGIN + ") no-repeat",
+            backgroundSize: '70em',
+        };
         return (
             <div style={{'height': '100%'}}>
                 <Grid container spacing={24} style={{'height': '100%'}}>
                     <Grid item md={6} only={['md', 'xl']}>
-                        <div id={'background_pic'}/>
+                        <div style={backdropLogin}/>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <div className="m-3 mt-5" id={'login-form'}>

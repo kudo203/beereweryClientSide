@@ -71,17 +71,20 @@ export default class Home extends React.Component{
 
 
     render(){
+        const backdropHome = {
+            height: '100%',
+            background: "url(" + process.env.REACT_APP_BACKDROP_HOME + ") no-repeat",
+            backgroundSize: '100% 100%',
+            backgroundBlendMode: 'luminosity'
+        };
         return(
             <div className="h-100">
-                <div>
-                    {process.env.REACT_APP_API_URL}
-                </div>
                 <Navbar
                     history = {this.props.history}
                     isAuthenticated = {this.props.isAuthenticated}
                     userHasAuthenticated = {this.props.userHasAuthenticated}
                 />
-                <div className="backdropHome">
+                <div style={backdropHome}>
                     <div className="row mx-0">
                         <div className="col-md-1 d-none d-md-block">
 

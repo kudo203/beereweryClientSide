@@ -202,9 +202,7 @@ export default class Profile extends React.Component{
 
     };
 
-    render(){/*
-        let followed = this.state.followed;
-        console.log("the user id is " , this.state)*/
+    render(){
         return(
             <div>
                 <Navbar
