@@ -16,7 +16,6 @@ export default class BeereweryServices{
 
     static searchBrewery(query, pageNo){
         let url = API_endpoint + 'search?q=' + query + '&key=' + key + "&format=" + breweryFormat + pageNo;
-        console.log(url);
         return axios.get(url).then((res) => res.data)
     }
 
@@ -24,13 +23,11 @@ export default class BeereweryServices{
     static getBeer(beerId){
 
         let url = API_endpoint + 'beer/' + beerId +'?key=' + key + beerDetailFormat;
-        console.log(url);
         return axios.get(url).then((res) => res.data)
     }
 
     static getBrewery(breweryId){
         let url = API_endpoint + 'brewery/' + breweryId +'?key=' + key + breweryDetailFormat;
-        console.log(url);
         return axios.get(url).then((res) => res.data)
     }
 }
