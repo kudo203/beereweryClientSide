@@ -54,9 +54,11 @@ export default class Navbar extends React.Component{
                         </button>
                     </li>
                     <li className="nav-item nav-link col-3 text-center">
-                        <li className="navbar-brand">
-                            Beerewery
-                        </li>
+                        <ul>
+                            <li className="navbar-brand">
+                                Beerewery
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <ul className={'navbar-nav'}>

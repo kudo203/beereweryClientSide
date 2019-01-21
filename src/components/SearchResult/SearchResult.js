@@ -236,7 +236,7 @@ export default class SearchResult extends React.Component {
 
                                                 {pages.map(page => {
                                                     return (
-                                                        <button className={"btn btn-light btn-outline-primary mx-1 my-1 " + (page == this.state.currentPage? "bg-primary text-white": "bg-light")}
+                                                        <button className={"btn btn-light btn-outline-primary mx-1 my-1 " + (page === this.state.currentPage? "bg-primary text-white": "bg-light")}
                                                             key={page}
                                                             {...getPageItemProps({
                                                                 pageValue: page,

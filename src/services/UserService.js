@@ -1,6 +1,5 @@
 import axios from "axios";
-// const API_URL = "http://localhost:4000";
-const API_URL = "https://boiling-ocean-17135.herokuapp.com";
+const API_URL = process.env.REACT_APP_BACKEND_URL;
 
 export default class UserService {
 
@@ -56,7 +55,6 @@ export default class UserService {
     };
 
     static followerUser = (userId , followId) => {
-        console.log(API_URL + "/api/user/"+userId+"/follow/"+followId);
         return axios.post(API_URL + "/api/user/"+userId+"/follow/"+followId, {},  {withCredentials: true});
     };
     static unFollowerUser = (userId , followId) => {

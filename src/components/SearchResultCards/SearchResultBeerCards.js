@@ -6,6 +6,7 @@ function SearchResultBeerCards({results}){
         results.map((lesson, index) => (
 
                 <BeerCard
+                    key = {index}
                     record = {lesson}
                 />
             )
